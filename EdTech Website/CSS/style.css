@@ -1,0 +1,523 @@
+/*1 Base Rule */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem=10px; */
+}
+
+p,
+li,
+a {
+    font-size: 1.7rem;
+    word-spacing: 0.3rem;
+    color: var(--heading-color);
+    font-weight: 500;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--para-color);
+}
+
+li {
+    list-style: none;
+
+}
+
+/* Theme */
+:root {
+    --main-color: #0062ff;
+    --supporting-color: #d1dced;
+    --supporting-color-two: #588bd8;
+    --font-color: #424242;
+    --bg-color: #ffffff;
+    --heading-color: #585858;
+    --hero-heading-color: #090f14;
+    --white-color: #fff;
+    --para-color: #000000;
+    --btn-hover-bg-color: #003b99;
+    --btn-box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 9.6rem 2.4rem;
+
+}
+
+.section-why--choose .container:first-child{
+    padding:6.4rem 0 2.4rem 0;
+}
+.section-about .container:first-child{
+    padding:6.4rem 0 2.4rem 0;
+}
+section-blog .container:first-child{
+    padding:6.4rem 0 2.4rem 0;
+}
+section-course .container:first-child{
+    padding:6.4rem 0 2.4rem 0;
+}
+section-contact-homepage .container:first-child{
+    padding:6.4rem 0 2.4rem 0;
+}
+.section-why--choose .container:first-child{
+    padding:2.4rem 0 6.4rem 0;
+}
+
+/* Layout */
+.grid {
+    display: grid;
+}
+
+.grid-two--cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three--cols {
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.grid-four--cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* module or reusable */
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3.2rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 0.6rem;
+    /* Corrected value */
+}
+
+.section-common-heading {
+    font-weight: 700;
+    font-size: 3.2rem;
+    text-transform: capitalize;
+}
+
+.section-common-subheading {
+    color: var(--heading-color);
+}
+
+
+.fa-brands {
+    padding: 2.5rem;
+    background-color: var(--supporting-color);
+    font-size: 2.4rem;
+    border-radius: 50%;
+    color: var(--main-color);
+
+}
+
+.fa-solid {
+    padding: 2.5rem;
+    background-color: var(--supporting-color);
+    font-size: 2.4rem;
+    border-radius: 50%;
+    color: var(--main-color);
+
+}
+
+
+/* states */
+
+.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow);
+}
+
+/* NABAR START */
+.navbar-brand img {
+    border-radius: 0.5rem;
+    border: 1.5px solid black;
+}
+
+.section-navbar {
+    background-color: rgb(252, 252, 252);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 24px 0px;
+    width: 100%;
+}
+
+.section-navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+}
+
+.section-navbar .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.section-navbar .navbar ul li a {
+    color: var(--heading-color);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+}
+
+.section-navbar .navbar ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -.3rem;
+    left: 0;
+    width: 0%;
+    border-bottom: 0.3rem solid var(--main-color);
+    transition: all 0.2s linear;
+}
+
+.section-navbar .navbar ul li a:hover:after {
+    width: 100%;
+
+
+}
+
+/* Navbar END */
+
+/* Hero Section */
+main {
+    position: relative;
+    background-image: linear-gradient(to right top, #0aa6dc, #58aedf, #7db6e0, #99bee1, #b1c7e1, #a9ceeb, #9fd5f4, #92dcfb, #37e4f9, #00eade, #00ecaa, #47e962);
+}
+
+.section-hero--image {
+    width: 100%;
+    height: auto;
+
+}
+
+.section-hero .grid {
+    align-items: center;
+    gap: 8rem;
+}
+
+.section-hero .grid .hero-subheading {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 2.3rem;
+    word-spacing: .4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+.section-hero .grid .hero-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6rem;
+    font-family: sans-serif;
+    color: var(--hero-heading-color);
+}
+
+.section-hero .grid .hero-para {
+    line-height: 1.7;
+    margin: 2rem 0 4rem 0;
+    font-weight: 400px;
+    color: var(--para-color);
+}
+
+/* template for cureve */
+.custom-shape-divider-bottom-1700557067 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700557067 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 85px;
+}
+
+.custom-shape-divider-bottom-1700557067 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* template for curve end */
+
+/* Hero Section End */
+
+/* aboust section */
+
+
+
+.section-about .about-div {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-about .grid {
+    gap: 4rem;
+}
+
+.section-common-title {
+    font-size: 2rem;
+    margin: 2.4rem 0 1.2rem 0;
+}
+
+.icon img {
+    /* these two settings are for centering the image  display: block and margin 0 auto; */
+    display: block;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: var(--supporting-color);
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.about-div .icon img:hover {
+    /* these setting use for animation and transition */
+    background-color: var(--supporting-color-two);
+}
+
+/* aboutSection End */
+
+
+
+/* Course start */
+.about-div:hover {
+    box-shadow: var(--btn-box-shadow);
+
+    & .icon {
+        transition: all 0.5s linear;
+        transform: rotate3d(1, 1, 1, 360deg);
+        /* transform: rotate(360deg); */
+    }
+}
+
+/* for Targetting a unique icon */
+.about-div:nth-child(1) .icon .fa-solid {
+
+    color: #FF9B50;
+    background-color: #f6dfce;
+}
+
+.about-div:nth-child(2) .icon .fa-brands {
+    color: #289028;
+    background-color: #d4d7d7;
+}
+
+.about-div:nth-child(3) .icon .fa-brands {
+    color: orange;
+    background-color: rgb(244, 215, 156);
+}
+
+.about-div:nth-child(4) .icon .fa-brands {
+    color: rgb(27, 27, 185);
+    background-color: rgb(164, 164, 181);
+}
+
+.about-div:nth-child(5) .icon .fa-brands {
+    color: rgb(249, 249, 1);
+    background-color: rgb(101, 101, 91);
+}
+
+.about-div:nth-child(6) .icon .fa-brands {
+    color: #495057;
+    background-color: #ced4da;
+}
+
+.about-div:nth-child(7) .icon .fa-solid {
+    color: #b860fb;
+    background-color: #e1b6fa;
+}
+
+.about-div:nth-child(8) .icon .fa-brands {
+    color: #003049;
+    background-color: #669bbc;
+}
+
+/* Course End */
+
+/* WHY US Started */
+
+.section-why--choose .text-align--right .why-choose--div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    text-align: right;
+}
+
+.common-text--highlight .fa-solid {
+    color: var(--main-color);
+    width: 7rem;
+    height: auto;
+    font-size: 2.4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--supporting-color);
+}
+
+.section-why--choose .grid {
+    gap: 6rem;
+}
+
+.choose-center--div img {
+    width: 100%;
+
+}
+
+
+
+/* WHY US Ended */
+
+/* contact home started */
+.section-contact-homepage{
+    width: 60%;
+    height: 30rem;
+    margin: 0 auto;
+    box-shadow: rgba(60,64,67,0.3) 0px 1px 2px 0px, rgba(60,64,67,0.15)0px 2px 6px 2px;
+    margin-bottom: 5rem;
+    border-radius: 2rem ;
+}
+.section-contact-homepage .grid{
+    align-items: center;
+    gap: 6.8rem;
+    padding: 2rem;
+    
+}
+.contact-title{
+font-size: 3.5rem;
+line-height: 1.2;
+}
+.contact-image img{
+    width: 50%;
+    height: auto;
+}
+section-contact-homepage .fa-solid{
+    padding: 0;
+    color: var(--white-color);
+}
+/* contact home ended */
+
+/* footer start*/
+.section-footer{
+    background-color: var(--supporting-color-two);
+    color: var(--white-color);
+    padding: 6.4rem 0;
+}
+footer*{
+    color: var(--white-color);
+}
+/* footer end */
+/* FILEPATH: /C:/Users/hasir/Desktop/luv/Website Practice/EdTech Website/CSS/style.css */
+
+.about-div:nth-child(5) .icon .fa-brands {
+    color: rgb(249, 249, 1);
+    background-color: rgb(101, 101, 91);
+}
+
+.about-div:nth-child(6) .icon .fa-brands {
+    color: #495057;
+    background-color: #ced4da;
+}
+
+.about-div:nth-child(7) .icon .fa-solid {
+    color: #b860fb;
+    background-color: #e1b6fa;
+}
+
+.about-div:nth-child(8) .icon .fa-brands {
+    color: #003049;
+    background-color: #669bbc;
+}
+
+/* Course End */
+
+/* WHY US Started */
+
+.section-why--choose .text-align--right .why-choose--div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.common-text--highlight .fa-solid {
+    color: var(--main-color);
+    width: 7rem;
+    height: auto;
+    font-size: 2.4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--supporting-color);
+}
+
+.section-why--choose .grid {
+    gap: 6rem;
+}
+
+.choose-center--div img {
+    width: 100%;
+}
+
+/* WHY US Ended */
+
+/* contact home started */
+.section-contact-homepage {
+    width: 60%;
+    height: 30rem;
+    margin: 0 auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+}
+
+.section-contact-homepage .grid {
+    align-items: center;
+    gap: 6.8rem;
+    padding: 2rem;
+}
+
+.contact-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.contact-image img {
+    width: 50%;
+    height: auto;
+}
+
+.section-contact-homepage .fa-solid {
+    padding: 0;
+    color: var(--white-color);
+}
+/* contact home ended */
+
+/* footer start */
+.section-footer {
+    background-color: var(--supporting-color-two);
+    color: var(--white-color);
+    padding: 6.4rem 0;
+}
